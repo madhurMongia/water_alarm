@@ -1,0 +1,33 @@
+mat-label {
+    font-size: 1.2rem !important;
+}
+
+.mat-input-element {
+    font-size: 1.2rem !important;
+}
+
+.mat-card-actions {
+    padding-bottom: 4px !important;
+}
+
+.mat-raised-button {
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    line-height: 1.75 !important;
+    letter-spacing: 0.02857em !important;
+    text-transform: uppercase !important;
+    border-radius: 4px !important;
+    padding: 0.75rem 1.5rem !important;
+    transition: all 0.2s ease-in-out !important;
+    outline: none !important;
+    width: 10vw;
+}
+
+.mat-icon {
+    font-size: 2rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}

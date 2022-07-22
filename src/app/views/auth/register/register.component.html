@@ -1,0 +1,51 @@
+<main
+  class="absolute flex justify-center items-center w-full h-full overflow-hidden"
+>
+  <mat-card
+    class="mt-[-20px] flex items-center justify-center pb-3 overflow-hidden min-h-fit"
+  >
+    <mat-icon
+      mat-card-avatar
+      color="primary"
+      class="flex items-center justify-center"
+      >lock</mat-icon
+    >
+    <mat-card-title class="text-center py-2 text-3xl font-normal text-gray-900"
+      >Register</mat-card-title
+    >
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <form class="flex flex-col space-y-2 w-[30vw] pt-10 pb-2 px-2">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Email" type="email" class="auth-input" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" type="email" class="auth-input" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            placeholder="password"
+            type="password"
+            class="auth-input"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm Password</mat-label>
+          <input
+            matInput
+            placeholder="password"
+            type="password"
+            class="auth-input"
+          />
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+      <button mat-raised-button color="primary" class="p-10">Register</button>
+    </mat-card-actions>
+  </mat-card>
+</main>
