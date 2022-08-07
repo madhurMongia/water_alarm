@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -21,7 +21,9 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "angular-plotly.js": "^4.0.4",
+    "express": "^4.18.1",
     "ng-http-loader": "^12.0.0",
+    "path": "^0.12.7",
     "plotly.js-dist-min": "^2.13.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
