@@ -1,1 +1,7 @@
-<p>dashboard works!</p>
+<div class="mt-5 text-2xl font-bold px-4">Your Tanks:</div>
+<main
+  class="mt-5 items-center justify-center w-full overflow-hidden space-x-10 h-[45vh]"
+>
+  <app-tank-card [tank]="tank" *ngFor="let tank of tanks"></app-tank-card>
+</main>
+<app-history></app-history>

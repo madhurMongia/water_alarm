@@ -1,0 +1,56 @@
+<div class="flex items-center justify-center pb-3 overflow-hidden min-h-fit">
+  <div>{{ tank?.name }}</div>
+  <hr />
+  <div>
+    <div class="justify-between px-6 py-3">
+      <div class="grid grid-cols-2 grid-row-3 m-2 ml-0 gap-y-3">
+        <div
+          class="text-black xl:text-md text-md font-semi-bold text-left py-1 lg:py-0"
+        >
+          Capacity:
+        </div>
+        <div
+          class="text-black xl:text-md text-md font-semi-bold text-right py-1 lg:py-0"
+        >
+          {{ tank?.capacity }}
+        </div>
+        <div
+          class="text-black xl:text-md text-md font-semi-bold text-left py-1 lg:py-0"
+        >
+          Current Level:
+        </div>
+        <div
+          class="text-black xl:text-md text-md font-semi-bold text-right py-1 lg:py-0"
+        >
+          {{ current_level ? current_level : levels[0]?.level }}
+        </div>
+        <div
+          class="text-black xl:text-md text-md font-semi-bold text-left py-1 lg:py-0"
+        >
+          Coorditates:
+        </div>
+
+        <div
+          class="text-black xl:text-md text-md font-semi-bold text-right py-1 lg:py-0"
+        >
+          {{ tank?.latitude }},{{ tank?.longitude }}
+        </div>
+        <div
+          class="text-black xl:text-md text-md font-semi-bold text-left py-1 lg:py-0"
+        >
+          Active:
+        </div>
+
+        <div
+          class="text-black xl:text-md text-md font-semi-bold text-right py-1 lg:py-0"
+        >
+          {{ tank?.is_active ? "Yes" : "No" }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pr-2 pb-2">
+    <button class="p-10" (click)="showHistory(tank.id)">History</button>
+    <button class="p-10" (click)="toggleActive(tank)">Toggle Active</button>
+  </div>
+</div>

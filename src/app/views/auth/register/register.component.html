@@ -1,51 +1,54 @@
-<main
-  class="absolute flex justify-center items-center w-full h-full overflow-hidden"
->
-  <mat-card
-    class="mt-[-20px] flex items-center justify-center pb-3 overflow-hidden min-h-fit"
-  >
-    <mat-icon
-      mat-card-avatar
-      color="primary"
-      class="flex items-center justify-center"
-      >lock</mat-icon
+<div class="shadow-md container flex flex-row">
+  <form class="px-2" [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+    <h3 class="mr-auto">Register</h3>
+    <h2 class="mt-2 font-semibold">Create your account</h2>
+
+    <label for="username" class="-mt-8">Username</label>
+    <input
+      type="text"
+      placeholder="your username"
+      id="username"
+      formControlName="name"
+    />
+
+    <label for="email" class="-mt-8">Email</label>
+    <input type="text" placeholder="Email" id="email" formControlName="email" />
+
+    <label for="password">Password</label>
+    <input
+      type="password"
+      placeholder="Password"
+      id="password"
+      formControlName="password"
+    />
+
+    <label for="password">Confirm Password</label>
+    <input
+      type="password"
+      placeholder="Confirm Password"
+      id=" Confirm password"
+      formControlName="confirmPassword"
+    />
+
+    <button
+      class="text-black disabled:opacity-20"
+      type="submit"
+      [disabled]="RegisterForm.invalid && RegisterForm.touched"
     >
-    <mat-card-title class="text-center py-2 text-3xl font-normal text-gray-900"
-      >Register</mat-card-title
-    >
-    <mat-divider></mat-divider>
-    <mat-card-content>
-      <form class="flex flex-col space-y-2 w-[30vw] pt-10 pb-2 px-2">
-        <mat-form-field appearance="outline">
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="Email" type="email" class="auth-input" />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Email</mat-label>
-          <input matInput placeholder="Email" type="email" class="auth-input" />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Password</mat-label>
-          <input
-            matInput
-            placeholder="password"
-            type="password"
-            class="auth-input"
-          />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Confirm Password</mat-label>
-          <input
-            matInput
-            placeholder="password"
-            type="password"
-            class="auth-input"
-          />
-        </mat-form-field>
-      </form>
-    </mat-card-content>
-    <mat-card-actions class="text-center">
-      <button mat-raised-button color="primary" class="p-10">Register</button>
-    </mat-card-actions>
-  </mat-card>
-</main>
+      Register
+    </button>
+    <div class="text-white flex items-end justify-center pt-6">
+      Already have an account?
+      <div routerLink="/auth/login" class="underline-offset-4 underline">
+        Login here
+      </div>
+    </div>
+  </form>
+  <img src="assets/tank1.png" alt="tank" class="h-56 m-auto" />
+</div>
+<div
+  class="absolute z-[-1] top-[15px] left-[325px] h-32 w-32 rounded-full bg-gradient-to-tr from-[#697A17] to-[#0496FF]"
+></div>
+<div
+  class="absolute z-[-1] bottom-[15px] right-[330px] h-32 w-32 rounded-full bg-gradient-to-tr from-[#545496] to-[#96031A]"
+></div>

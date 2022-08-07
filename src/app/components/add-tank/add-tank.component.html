@@ -1,0 +1,55 @@
+<div
+  class="font-semibold text-3xl rounded-full bg-[#6653aa] text-white w-12 h-12 bottom-5 right-5 z-30 fixed cursor-pointer flex items-center justify-center"
+  (click)="toogleShow()"
+  style="color: white !important"
+>
+  {{ show ? "x" : "+" }}
+</div>
+<div
+  class="p-10 bg-[rgba(255,255,255,0.4)] -translate-x-1/2 -translate-y-1/2 w-[60vw] h-fit backdrop-blur-lg shadow-md fixed z-30 top-1/2 left-1/2 rounded-2xl"
+  *ngIf="show"
+>
+  <img
+    src="../../../assets/close.png"
+    class="h-5 top-5 right-5 cursor-pointer inline-block absolute"
+    (click)="toogleShow()"
+  />
+  <h3 clas="py-6 text-2xl">Add a tank</h3>
+  <form class="grid grid-cols-2 gap-4">
+    <div>
+      <label for="name">name</label>
+      <input id="name" placeholder="name" required />
+    </div>
+    <div>
+      <label for="capacity">capacity</label>
+      <input id="capacity" placeholder="capacity" required />
+    </div>
+    <div>
+      <label for="depth">depth</label>
+      <input id="depth" placeholder="depth" required />
+    </div>
+    <div>
+      <label>Location</label>
+      <div class="flex flex-row space-x-1">
+        <input id="latitude" placeholder="latitude" required />
+        <input id="longitude" placeholder="longitude" required />
+      </div>
+      <div
+        class="text-black text-sm leading-snug p-3 font-semibold hover:underline hover:font-bold cursor-pointer"
+      >
+        Set current location
+      </div>
+    </div>
+    <div class="col-span-full flex justify-center items-center">
+      <button type="submit" class="w-10">Add</button>
+    </div>
+  </form>
+</div>
+<div
+  class="w-full h-full z-20 bg-black opacity-0 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+  [ngStyle]="
+    show
+      ? { 'pointer-events': 'user', opacity: 0.6 }
+      : { 'pointer-events': 'none', opacity: 0 }
+  "
+></div>

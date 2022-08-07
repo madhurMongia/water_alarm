@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './previews/auth/auth.component';
+import { MainComponent } from './previews/main/main.component';
 import { LoginComponent } from './views/auth/login/login.component';
 import { RegisterComponent } from './views/auth/register/register.component';
+import { DashboardComponent } from './views/main/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'auth', 
@@ -12,8 +14,11 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponent }
   ] 
 },
-{ path: '', redirectTo: 'auth/login', pathMatch: 'full' },
-{ path: '**', redirectTo: 'auth/login' }
+{ path : 'main',
+component : MainComponent,
+children: [
+  { path: '', component: DashboardComponent },
+]}
 ];
 
 

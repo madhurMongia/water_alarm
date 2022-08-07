@@ -1,33 +1,82 @@
-mat-label {
-    font-size: 1.2rem !important;
+.container {
+    height: fit-content;
+    width: 50vw;
+    background: linear-gradient(117.76deg,
+            rgba(255, 255, 255, 0.7) -7.21%,
+            rgba(255, 255, 255, 0.5) 118.08%);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.02);
+    border-radius: 12px;
+    padding: 30px 20px 30px 20px;
 }
 
-.mat-input-element {
-    font-size: 1.2rem !important;
+form {
+    // height: 520px;
+    // width: 400px;
+    // background-color: rgba(255, 255, 255, 0.25);
+    // position: absolute;
+    // transform: translate(-50%, -50%);
+    // top: 50%;
+    // left: 50%;
+    // border-radius: 10px;
+    // backdrop-filter: blur(10px);
+    // // border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.mat-card-actions {
-    padding-bottom: 4px !important;
+form * {
+    font-family: "Poppins", sans-serif;
+    color: rgba(28, 27, 27, 0.706);
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
 }
 
-.mat-raised-button {
-    font-family: Roboto, "Helvetica Neue", sans-serif !important;
-    font-size: 17px !important;
-    font-weight: 500 !important;
-    line-height: 1.75 !important;
-    letter-spacing: 0.02857em !important;
-    text-transform: uppercase !important;
-    border-radius: 4px !important;
-    padding: 0.75rem 1.5rem !important;
-    transition: all 0.2s ease-in-out !important;
-    outline: none !important;
-    width: 10vw;
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
 }
 
-.mat-icon {
-    font-size: 2rem !important;
+label {
+    display: block;
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 3px solid #a7a6a6;
+    border-radius: 3px;
+    padding: 0 15px;
+    margin-top: 4px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+::placeholder {
+    color: gray;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #F56692;
+    opacity: 0.67;
+    color: white !important;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social {
+    margin-top: 30px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
 }

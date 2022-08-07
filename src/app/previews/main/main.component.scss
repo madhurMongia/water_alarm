@@ -1,0 +1,13 @@
+main {
+    // background: radial-gradient(ellipse at 0% 0%, #63a0a6, transparent),
+    //     //linear-gradient(to right,#514287 10% ,transparent),
+    //     radial-gradient(ellipse at 30% 65%, #6653aa, transparent),
+    //     radial-gradient(ellipse at 90% 90%, #938cc0 30%, transparent);
+    background-image: url('../../../assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // backdrop-filter: blur(10px);
+    // -webkit-backdrop-filter: blur(10px);
+    // background-attachment: scroll;
+}

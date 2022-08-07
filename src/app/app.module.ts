@@ -12,11 +12,16 @@ import { MainHeaderComponent } from './components/navbars/main-header/main-heade
 import { AuthComponent } from './previews/auth/auth.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { NgHttpLoaderModule } from 'ng-http-loader';
-import { MatDividerModule } from '@angular/material/divider';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MainComponent } from './previews/main/main.component';
+import { TankCardComponent } from './components/tank-card/tank-card.component';
+import * as PlotlyJS from 'plotly.js-dist-min';
+import { PlotlyModule } from 'angular-plotly.js';
+import { HistoryComponent } from './components/history/history.component';
+import { AddTankComponent } from './components/add-tank/add-tank.component';
+
+PlotlyModule.plotlyjs = PlotlyJS;
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,19 +30,20 @@ import {MatIconModule} from '@angular/material/icon';
     DashboardComponent,
     AuthHeaderComponent,
     MainHeaderComponent,
-    AuthComponent
+    AuthComponent,
+    MainComponent,
+    TankCardComponent,
+    HistoryComponent,
+    AddTankComponent
   ],
   imports: [
     BrowserModule,
+    PlotlyModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     NgHttpLoaderModule.forRoot(),
-    MatDividerModule,
-    MatInputModule,
-    MatButtonModule,
-    MatCardModule,
-    MatIconModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent,]
